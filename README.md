@@ -9,6 +9,6 @@
   ` 添加插件的一般形式 Plugin 'repository/vim_name' `
 
 3. 安装插件
-  ` 在vim的命令模式下运行`PluginInstall`
+  ` 在vim的命令模式下运行 PluginInstall`
 
 我的配置在.vimrc文件中
