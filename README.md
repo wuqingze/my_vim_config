@@ -1,4 +1,4 @@
-# my_vim_config
+### 介绍 
 我的vim配置
 
 ## quickstart
