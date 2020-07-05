@@ -7,7 +7,12 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'frazrepo/vim-rainbow'
-Plugin 'iamcco/markdown-preview.nvim'
+Plugin 'iamcco/markdown-preview.nvim' "安装方法： 1. PluginInstall 2. 进入经济~/.vim/bundle/markdown-preview.nvim/app目录，
+				      "运行install.sh文件 3.修改 ~/.vim/bundle/markdown-preview.nvim/app/server.js文件，
+				      "将      const host = openToTheWord ? '0.0.0.0' : '127.0.0.1'
+				      "修改为  const host = '0.0.0.0'
+				      "这个配置可以解决markdown preview
+				      "不能够局域网ip访问网页的问题
 call vundle#end()            " required
 filetype plugin indent on    " required
 set nu              
