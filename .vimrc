@@ -27,3 +27,5 @@ set fileencodings=ucs-bom,utf-8,cp936 " 解决中文乱码问题
 set fileencoding=gb2312               " 解决中文乱码问题 
 set termencoding=utf-8                " 解决中文乱码问题
 
+" use a custom port to start server or random for empty
+let g:mkdp_port = '2002'
