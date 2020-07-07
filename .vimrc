@@ -12,6 +12,7 @@ Plugin 'iamcco/markdown-preview.nvim' "安装方法： 1. PluginInstall 2. 进�
 				      "修改为  const host = '0.0.0.0'
 				      "这个配置可以解决markdown preview
 				      "不能够局域网ip访问网页的问题
+Plugin 'junegunn/vim-easy-align'      " 文本对齐
 call vundle#end()            " required
 filetype plugin indent on    " required
 set nu                       " 设置行号
@@ -29,3 +30,9 @@ set termencoding=utf-8                " 解决中文乱码问题
 
 " use a custom port to start server or random for empty
 let g:mkdp_port = '2002'
+
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
