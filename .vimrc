@@ -36,3 +36,7 @@ xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+" TAB产生4个空格：
+set ts=4  			" (注：ts是tabstop的缩写，设TAB宽4个空格)
+set expandtab
