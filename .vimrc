@@ -53,4 +53,3 @@ set expandtab
 " 124 [2] hello2
 " git push 免密码
 " git push 免密码
-hello
