@@ -18,6 +18,7 @@ filetype plugin indent on    " required
 set nu                       " 设置行号
 set autoindent               " 自动缩进
 inoremap jj <Esc>            " jj 键代替esc键实现vim插入模式退出
+map ge $                     " 行尾
 set shiftwidth=4      
 set ignorecase		     " 搜索忽略大小写;如果存在大写，则大小写敏感 
 set smartcase                " 搜索忽略大小写;如果存在大写，则大小写敏感 
@@ -40,3 +41,13 @@ nmap ga <Plug>(EasyAlign)
 " TAB产生4个空格：
 set ts=4  			" (注：ts是tabstop的缩写，设TAB宽4个空格)
 set expandtab
+
+" 一些有用的技巧
+" ggvG= 全局格式化
+" di(, di', di], vi(, vi', vi] 分别表示剪切()内的内容;剪切''内的内容;剪切[]内的内容;选择[]内的内容;选择[]内的内容;剪切选择内的内容;
+" sort r /regex 按照正则表达式进行排序
+" 例子
+" 121 [1] hllo4
+" 122 [2] hello3
+" 123 [1] hello1
+" 124 [2] hello2
