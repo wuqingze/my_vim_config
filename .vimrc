@@ -56,3 +56,9 @@ set expandtab
                                       "
                                       " 最实用也最容易被遗忘的Linux命令行使用技巧
                                       " 将输出转化成一张表格  cat xx | column -t
+                                      "
+                                      "
+"高亮当前行
+color desert
+set cursorline
+hi CursorLine term=bold cterm=bold guibg=Grey40
