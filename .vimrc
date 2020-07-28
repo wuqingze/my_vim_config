@@ -63,3 +63,6 @@ set expandtab
 color desert
 set cursorline
 hi CursorLine term=bold cterm=bold guibg=Grey40
+
+" 显示列号
+set ruler
