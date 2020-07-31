@@ -66,3 +66,8 @@ hi CursorLine term=bold cterm=bold guibg=Grey40
 
 " 显示列号
 set ruler
+
+" 启用相对行号（简写 :set rnu)
+set relativenumber
+" " 禁用相对行号
+" :set norelativenumber
