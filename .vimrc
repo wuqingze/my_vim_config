@@ -14,6 +14,9 @@ Plugin 'iamcco/markdown-preview.nvim' " 安装方法： 1. PluginInstall 2. 进�
                                       " 不能够局域网ip访问网页的问题
 Plugin 'junegunn/vim-easy-align'      " 文本对齐
 Plugin 'vim-scripts/taglist.vim'      " 展示函数变量，函数 启用命令:TlistToggle
+tchyny
+/
+vim-cursorwordPlugin 'itchyny/vim-cursorword'       " xiahuaxian
 call vundle#end()                     " required
 filetype plugin indent on             " required
 set nu                                " 设置行号
@@ -63,6 +66,5 @@ set expandtab
 color desert
 set cursorline
 hi CursorLine term=bold cterm=bold guibg=Grey40
-
 " 显示列号
 set ruler
