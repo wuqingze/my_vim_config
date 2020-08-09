@@ -68,3 +68,6 @@ set cursorline
 hi CursorLine term=bold cterm=bold guibg=Grey40
 " 显示列号
 set ruler
+
+" 映射TlistToglle 文件结构
+nnoremap <leader>f :TlistToggle
