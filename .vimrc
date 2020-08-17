@@ -71,3 +71,6 @@ set ruler
 
 " 映射TlistToglle 文件结构
 nnoremap <leader>f :TlistToggle
+
+" 高亮搜索
+nnoremap <silent><expr> <Leader>h (&hls && v:hlsearch ? ':nohls' : ':set hls')."\n"
