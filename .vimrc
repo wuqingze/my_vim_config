@@ -14,6 +14,7 @@ Plugin 'iamcco/markdown-preview.nvim' " 安装方法： 1. PluginInstall 2. 进�
                                       " 不能够局域网ip访问网页的问题
 Plugin 'junegunn/vim-easy-align'      " 文本对齐
 Plugin 'vim-scripts/taglist.vim'      " 展示函数变量，函数 启用命令:TlistToggle
+Plugin 'skywind3000/asyncrun.vim'     " 异步执行shell命令并在quickfix输出
 tchyny
 /
 vim-cursorwordPlugin 'itchyny/vim-cursorword'       " xiahuaxian
@@ -74,3 +75,10 @@ nnoremap <leader>f :TlistToggle
 
 " 高亮搜索
 nnoremap <silent><expr> <Leader>h (&hls && v:hlsearch ? ':nohls' : ':set hls')."\n"
+
+nnoremap  <leader>o  :copen
+nnoremap  <leader>q  :cclose
+nnoremap  <leader>r  :AsyncRun
+nnoremap  <leader>g  :vimgrep
+nnoremap  <leader>c  :!cc %
+nnoremap  <leader>rr :AsyncRun ./a.out
