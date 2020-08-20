@@ -76,9 +76,20 @@ nnoremap <leader>f :TlistToggle
 " 高亮搜索
 nnoremap <silent><expr> <Leader>h (&hls && v:hlsearch ? ':nohls' : ':set hls')."\n"
 
-nnoremap  <leader>o  :copen
-nnoremap  <leader>q  :cclose
-nnoremap  <leader>r  :AsyncRun
 nnoremap  <leader>g  :vimgrep
-nnoremap  <leader>c  :!cc %
-nnoremap  <leader>rr :AsyncRun ./a.out
+
+function! QFixToggle()
+    if exists("g:qfix_win")
+        cclose
+        unlet g:qfix_win
+    else
+        copen 10
+        let g:qfix_win = bufnr("$")
+    endif
+endfunction
+
+" leader + q切换quickfix窗口
+nnoremap <silent><expr> <Leader>q ':call QFixToggle()'."\n"
+
+" leader + r 运行a.out并异步输出到quickfix窗口
+nnoremap <silent><expr> <Leader>r ':copen'."\n".':AsyncRun ./a.out'."\n"
