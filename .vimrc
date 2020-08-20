@@ -15,9 +15,6 @@ Plugin 'iamcco/markdown-preview.nvim' " 安装方法： 1. PluginInstall 2. 进�
 Plugin 'junegunn/vim-easy-align'      " 文本对齐
 Plugin 'vim-scripts/taglist.vim'      " 展示函数变量，函数 启用命令:TlistToggle
 Plugin 'skywind3000/asyncrun.vim'     " 异步执行shell命令并在quickfix输出
-tchyny
-/
-vim-cursorwordPlugin 'itchyny/vim-cursorword'       " xiahuaxian
 call vundle#end()                     " required
 filetype plugin indent on             " required
 set nu                                " 设置行号
