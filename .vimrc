@@ -90,3 +90,4 @@ nnoremap <silent><expr> <Leader>q ':call QFixToggle()'."\n"
 
 " leader + r 运行a.out并异步输出到quickfix窗口
 nnoremap <silent><expr> <Leader>r ':copen'."\n".':AsyncRun ./a.out'."\n"
+nnoremap <silent><expr> <Leader>c ':w'."\n".':!./a.out'."\n"
