@@ -91,3 +91,12 @@ nnoremap <silent><expr> <Leader>q ':call QFixToggle()'."\n"
 " leader + r 运行a.out并异步输出到quickfix窗口
 nnoremap <silent><expr> <Leader>r ':copen'."\n".':AsyncRun ./a.out'."\n"
 nnoremap <silent><expr> <Leader>c ':w'."\n".':!./a.out'."\n"
+
+" F8：项目：运行
+" F9：单文件：编译
+" F10：打开/关闭底部的 quickfix 窗口
+
+nnoremap <silent><expr> <F8> ':!./a.out'."\n"
+nnoremap <silent><expr> <F9> ':!cc %'."\n"
+" 设置 F10 打开/关闭 Quickfix 窗口
+nnoremap <silent><expr> <F10> ':call QFixToggle()'."\n"
