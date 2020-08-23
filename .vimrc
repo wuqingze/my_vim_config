@@ -68,7 +68,7 @@ hi CursorLine term=bold cterm=bold guibg=Grey40
 set ruler
 
 " 映射TlistToglle 文件结构
-nnoremap <leader>f :TlistToggle
+nnoremap <leader>f :TlistToggle<CR>
 
 " 高亮搜索
 nnoremap <silent><expr> <Leader>h (&hls && v:hlsearch ? ':nohls' : ':set hls')."\n"
