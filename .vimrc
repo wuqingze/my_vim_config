@@ -22,7 +22,7 @@ call vundle#end()                     " required
 filetype plugin indent on             " required
 set nu                                " 设置行号
 set autoindent                        " 自动缩进
-inoremap jj <Esc>0                     " jj 键代替esc键实现vim插入模式退出
+inoremap <silent>jj  <Esc>0                  " jj 键代替esc键实现vim插入模式退出
 map ge $                              " 行尾
 set shiftwidth=4      
 set ignorecase                        " 搜索忽略大小写;如果存在大写，则大小写敏感
