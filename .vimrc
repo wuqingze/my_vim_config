@@ -7,6 +7,7 @@ Plugin 'VundleVim/Vundle.vim'         " vim插件管理工具，安装可以运�
 Plugin 'scrooloose/nerdtree'          " 目录管理工具
 Plugin 'ctrlpvim/ctrlp.vim'           " 文件搜索工具
 Plugin 'iamcco/markdown-preview.nvim' " 安装方法： 1. PluginInstall 2. 进入经济~/.vim/bundle/markdown-preview.nvim/app目录，
+Plugin 'axiaoxin/vim-json-line-format' 
                                       " 运行install.sh文件 3.修改 ~/.vim/bundle/markdown-preview.nvim/app/server.js文件，
                                       " 将      const host = openToTheWord ? '0.0.0.0' : '127.0.0.1'
                                       " 修改为  const host = '0.0.0.0'
@@ -21,8 +22,8 @@ call vundle#end()                     " required
 filetype plugin indent on             " required
 set nu                                " 设置行号
 set autoindent                        " 自动缩进
-inoremap jj <Esc>            " jj 键代替esc键实现vim插入模式退出
-map ge $                     " 行尾
+inoremap jj <Esc>0                     " jj 键代替esc键实现vim插入模式退出
+map ge $                              " 行尾
 set shiftwidth=4      
 set ignorecase                        " 搜索忽略大小写;如果存在大写，则大小写敏感
 set smartcase                         " 搜索忽略大小写;如果存在大写，则大小写敏感
@@ -103,6 +104,8 @@ nnoremap <silent><expr> <F9> ':!cc %'."\n"
 " 设置 F10 打开/关闭 Quickfix 窗口
 nnoremap <silent><expr> <F10> ':call QFixToggle()'."\n"
 
+" f12 vimgrep, 发现vimgrep还是非常常用的功能
+nnoremap <silent><expr> <F12> ':vimgrep'
 
 " 正确的ctags配置
 
