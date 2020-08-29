@@ -136,3 +136,11 @@ if !isdirectory(s:vim_tags)
 
 " 动态语法检查
 execute pathogen#infect()
+
+" f11映射翻译当前单词
+nnoremap <expr> <F11> 'yiw:call PasteWord()'."\n"
+function! PasteWord()
+    exec "!wd ".getreg(0)
+endfunction
+
+
