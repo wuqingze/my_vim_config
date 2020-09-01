@@ -150,3 +150,6 @@ endfunction
 let g:Tlist_Show_One_File = 1
 
 nnoremap <silent><expr> qq  ':q!'."\n"
+
+" ar 映射打开quickfix和填写AsyncRun
+nnoremap ar :copen<CR>:AsyncRun
