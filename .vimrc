@@ -145,3 +145,8 @@ endfunction
 
 " 下划线当前行
 :hi CursorLine gui=underline cterm=underline
+
+" 设置为1，则不同时显示多个文件的tag只显示当前文件的tag。缺省为显示多个文件中的tag。
+let g:Tlist_Show_One_File = 1
+
+nnoremap <silent><expr> qq  ':q!'."\n"
