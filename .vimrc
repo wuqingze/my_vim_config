@@ -143,4 +143,5 @@ function! PasteWord()
     exec "!wd ".getreg(0)
 endfunction
 
-
+" 下划线当前行
+:hi CursorLine gui=underline cterm=underline
