@@ -7,7 +7,6 @@ Plugin 'VundleVim/Vundle.vim'         " vim插件管理工具，安装可以运�
 Plugin 'scrooloose/nerdtree'          " 目录管理工具
 Plugin 'ctrlpvim/ctrlp.vim'           " 文件搜索工具
 Plugin 'iamcco/markdown-preview.nvim' " 安装方法： 1. PluginInstall 2. 进入经济~/.vim/bundle/markdown-preview.nvim/app目录，
-Plugin 'axiaoxin/vim-json-line-format' 
                                       " 运行install.sh文件 3.修改 ~/.vim/bundle/markdown-preview.nvim/app/server.js文件，
                                       " 将      const host = openToTheWord ? '0.0.0.0' : '127.0.0.1'
                                       " 修改为  const host = '0.0.0.0'
@@ -18,6 +17,7 @@ Plugin 'vim-scripts/taglist.vim'      " 展示函数变量，函数 启用命令
 Plugin 'skywind3000/asyncrun.vim'     " 异步执行shell命令并在quickfix输出
 Plugin 'ludovicchabant/vim-gutentags' " 自动索引
 Plugin 'tpope/vim-pathogen'           " 动态语法检查
+Plugin 'Yggdroot/LeaderF'             " 函数列表
 call vundle#end()                     " required
 filetype plugin indent on             " required
 set nu                                " 设置行号
@@ -143,9 +143,6 @@ function! PasteWord()
     exec "!wd ".getreg(0)
 endfunction
 
-" 下划线当前行
-:hi CursorLine gui=underline cterm=underline
-
 " 设置为1，则不同时显示多个文件的tag只显示当前文件的tag。缺省为显示多个文件中的tag。
 let g:Tlist_Show_One_File = 1
 
@@ -153,3 +150,21 @@ nnoremap <silent><expr> qq  ':q!'."\n"
 
 " ar 映射打开quickfix和填写AsyncRun
 nnoremap ar :copen<CR>:AsyncRun
+
+nnoremap vg :vimgrep
+nnoremap <f7> :AsyncRun g++ %<CR>:copen<CR>
+nnoremap <f6> :AsyncRun ./a.out
+nnoremap <f1> :LeaderfFunction!<CR>
+
+noremap <f1>n :LeaderfMru<cr>
+noremap <f1>p :LeaderfFunction!<cr>
+let g:Lf_StlSeparator = { 'left': '', 'right': '', 'font': '' }
+
+let g:Lf_RootMarkers = ['.project', '.root', '.svn', '.git']
+let g:Lf_WorkingDirectoryMode = 'Ac'
+let g:Lf_WindowHeight = 0.30
+let g:Lf_CacheDirectory = expand('~/.vim/cache')
+let g:Lf_ShowRelativePath = 0
+let g:Lf_HideHelp = 1
+let g:Lf_StlColorscheme = 'powerline'
+let g:Lf_PreviewResult = {'Function':0, 'BufTag':0}
