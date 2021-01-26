@@ -31,7 +31,7 @@ set noswapfile                        " 不备份，讨厌.~文件,一段时间�
 map <C-o> :NERDTreeToggle<CR>         " ctrl + o 快捷键用来开启/关闭NERDTree插件
 set encoding=utf-8                    " 解决中文乱码问题
 set fileencodings=ucs-bom,utf-8,cp936 " 解决中文乱码问题
-set fileencoding=gb2312               " 解决中文乱码问题
+set fileencoding=utf-8                " 解决中文乱码问题
 set termencoding=utf-8                " 解决中文乱码问题
 
                                       " use a custom port to start server or random for empty
