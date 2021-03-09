@@ -168,3 +168,15 @@ let g:Lf_ShowRelativePath = 0
 let g:Lf_HideHelp = 1
 let g:Lf_StlColorscheme = 'powerline'
 let g:Lf_PreviewResult = {'Function':0, 'BufTag':0}
+
+" 设置粘贴快捷键
+function! PasteToggle()
+    if exists("g:paste")
+        exec "set nopaste"
+        unlet g:paste
+    else
+        exec "set paste"
+        let g:paste = bufnr("$")
+    endif
+endfunction
+nnoremap <silent><expr> <Leader>p ':call PasteToggle()'."\n"
